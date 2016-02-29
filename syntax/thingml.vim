@@ -17,12 +17,13 @@ syn keyword thingMLkeywords         datatype thing
 syn keyword thingBlockCommand       action do end on exit end
 syn keyword stateConst              entry exit
 syn keyword modifier                fragment includes select
+syn keyword functionCommand         function do while return
 syn keyword portBlock               required provided
 syn keyword portBlock               port nextgroup=thingName
 syn keyword portBlock               receives nextgroup=thingName
 syn keyword portBlock               sends nextgroup=thingName
 syn keyword messageBlock            message nextgroup=msgName
-syn keyword cepCommand              stream from produce
+syn keyword cepCommand              stream from produce var
 syn keyword conditionalCommand      keep if
 syn keyword boolean                 true false
 syn keyword stateChartCommand       statechart state init internal event
@@ -46,6 +47,7 @@ hi def link thingBlockCommand      Statement
 hi def link thingMLkeywords        Statement
 hi def link cepCommand             Statement
 hi def link messageBlock           Statement
+hi def link functionCommand        Statement
 hi def link stateChartCommand      Statement
 hi def link modifier               Identifier
 hi def link portBlock              Keyword
