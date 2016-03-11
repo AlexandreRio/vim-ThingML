@@ -39,9 +39,13 @@ syn keyword configBlockCommand      configuration nextgroup=thingName
 "syn region cepBlock start="stream" end="produce" fold transparent contains=cepCommand
 "syn region configBlock start="{" end="}" fold contains=configBlockCommand
 syn region paren start="(" end=")" transparent
+syn region slComment start="//" end="$"
+syn region mlComment start="/\*" end="\*/"
 
 let b:current_syntax = "thingml"
 
+hi def link slComment              Comment
+hi def link mlComment              Comment
 hi def link thingName              String
 hi def link thingBlockCommand      Statement
 hi def link thingMLkeywords        Statement
