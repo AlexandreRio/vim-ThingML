@@ -17,7 +17,7 @@ endif
 
 function! CompileToArduino()
   silent !clear
-  execute "!" . g:thingml_compiler_command . " arduino " . bufname("%")
+  execute "!" . g:thingml_compiler_command . " -c arduino -s " . bufname("%")
 endfunction
 
 function! CompileArduinoCode()
