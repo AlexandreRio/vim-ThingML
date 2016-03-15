@@ -13,7 +13,7 @@ syn match msgName "\w+"
 syn match number "\<\d\+\>"
 
 syn keyword thingMLkeywords         thing skipwhite
-syn keyword thingMLkeywords         datatype thing
+syn keyword thingMLkeywords         datatype thing property import
 syn keyword thingBlockCommand       action do end on exit end
 syn keyword stateConst              entry exit
 syn keyword modifier                fragment includes select during buffer by
@@ -26,9 +26,9 @@ syn keyword messageBlock            message nextgroup=msgName
 syn keyword cepCommand              stream from produce var
 syn keyword conditionalCommand      keep if
 syn keyword boolean                 true false
-syn keyword stateChartCommand       statechart state init internal event
+syn keyword stateChartCommand       statechart state init internal event guard transition
 syn keyword stateChartCommand       send print
-syn keyword configBlockCommand      instance connector
+syn keyword configBlockCommand      instance connector protocol over
 syn keyword configBlockCommand      configuration nextgroup=thingName
 
 "syn region thingBlock start="{" end="}" fold transparent contains=ALLBUT,configBlock
