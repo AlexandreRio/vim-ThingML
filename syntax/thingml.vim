@@ -15,7 +15,7 @@ syn match number "\<\d\+\>"
 syn keyword thingMLkeywords         thing skipwhite
 syn keyword thingMLkeywords         datatype thing property import set
 syn keyword thingBlockCommand       action do end on exit end
-syn keyword stateConst              entry exit
+syn keyword stateConst              entry exit readonly
 syn keyword modifier                fragment includes select during buffer by
 syn keyword functionCommand         function do while return
 syn keyword portBlock               required provided
