@@ -26,7 +26,8 @@ syn keyword messageBlock            message nextgroup=msgName
 syn keyword cepCommand              stream from produce var
 syn keyword conditionalCommand      keep if
 syn keyword boolean                 true false
-syn keyword stateChartCommand       statechart state init internal event guard transition
+syn keyword stateChartCommand       statechart omposite region
+syn keyword stateChartCommand       state init internal event guard transition
 syn keyword stateChartCommand       send print
 syn keyword configBlockCommand      instance connector protocol over
 syn keyword configBlockCommand      configuration nextgroup=thingName
