@@ -15,6 +15,10 @@ if !exists("g:arduino_compiler_command")
   let g:arduino_compiler_command = "ard.sh -b"
 endif
 
+if !exists("g:arduino_compiler_uploader_command")
+  let g:arduino_compiler_uploader_command = "ard.sh -bu"
+endif
+
 function! CompileToArduino()
   silent !clear
   execute "!" . g:thingml_compiler_command . " -c arduino -s " . bufname("%")
@@ -25,5 +29,11 @@ function! CompileArduinoCode()
   execute "!" . g:arduino_compiler_command
 endfunction
 
-nnoremap <buffer> <F4> :call CompileToArduino()<CR>
-nnoremap <buffer> <F5> :call CompileArduinoCode()<CR>
+function! CompileAndUploadArduinoCode()
+  silent !clear
+  execute "!" . g:arduino_compiler_uploader_command
+endfunction
+
+nnoremap <buffer> <F3> :call CompileToArduino()<CR>
+nnoremap <buffer> <F4> :call CompileArduinoCode()<CR>
+nnoremap <buffer> <F5> :call CompileAndUploadArduinoCode()<CR>
