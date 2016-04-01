@@ -24,7 +24,7 @@ syn keyword portBlock               receives nextgroup=thingName
 syn keyword portBlock               sends nextgroup=thingName
 syn keyword messageBlock            message nextgroup=msgName
 syn keyword cepCommand              stream from produce var
-syn keyword conditionalCommand      keep if
+syn keyword conditionalCommand      keep if else
 syn keyword boolean                 true false
 syn keyword stateChartCommand       statechart omposite region
 syn keyword stateChartCommand       state init internal event guard transition
