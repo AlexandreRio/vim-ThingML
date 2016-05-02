@@ -29,7 +29,7 @@ syn keyword boolean                 true false
 syn keyword stateChartCommand       statechart omposite region
 syn keyword stateChartCommand       state init internal event guard transition
 syn keyword stateChartCommand       send print
-syn keyword configBlockCommand      instance connector protocol over
+syn keyword configBlockCommand      group instance connector protocol over
 syn keyword configBlockCommand      configuration nextgroup=thingName
 
 "syn region thingBlock start="{" end="}" fold transparent contains=ALLBUT,configBlock
